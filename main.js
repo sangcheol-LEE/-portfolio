@@ -1,18 +1,19 @@
 'use strict';
 
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
+const navBar = document.querySelector('#navbar');
+const navBarHeight = navBar.getBoundingClientRect().height;
 
 //스크롤 시 nav가 home화면보다 많이 내려갔을 경우 nav에 에니메이션 효과
+document.addEventListener('scroll', () => {
+  const windowY = window.scrollY // 화면 스크롤 값
 
-document.addEventListener("scroll", () => {
-  console.log("scrollY",window.scrollY)
-  console.log(`height: ${navbarHeight}`)
+  console.log('windowY',windowY)
+  console.log('navBarHeight',navBarHeight)
 
-  if(window.scrollY > navbarHeight){ //scrolling이 navbarHeight 이상으로 동작하면 
-    navbar.classList.add('navbar--dark');
+  if(windowY > navBarHeight) {
+    navBar.classList.add('navbar--dark')
   } else {
-    navbar.classList.remove('navbar--dark')
+    navBar.classList.remove('navbar--dark')
   }
-});
+})
 
