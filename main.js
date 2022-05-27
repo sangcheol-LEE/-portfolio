@@ -2,7 +2,6 @@
 
 const navBar = document.querySelector('#navbar');
 const navBarHeight = navBar.getBoundingClientRect().height;
-const aboutBtn = document.querySelectorAll('.navbar__menu__item')[1];
 
 //스크롤 시 nav가 home화면보다 많이 내려갔을 경우 nav에 에니메이션 효과
 document.addEventListener('scroll', () => {
@@ -18,16 +17,30 @@ document.addEventListener('scroll', () => {
   }
 })
 
-console.log("aboutBtn",aboutBtn)
-aboutBtn.addEventListener('click', goToTop)
+// 버튼 클릭시 지정된 위치로 가게 하는 기능
 
-function goToTop() {
-  let topY = document.querySelector('#about').offsetTop - navBarHeight;
-  window.scrollTo({top:topY, behavior:"smooth"})
-}
+const navBarMenu = document.querySelector('.navbar__menu');
 
+navBarMenu.addEventListener('click', (ev) => {
+  const target = ev.target;
+  const link = target.dataset.link;
 
+  if(link == null) {
+    return;
+  }
 
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+})
+
+// contact btn 클릭 시 contact 창
+
+const homeContact = document.querySelector('.home__contact');
+
+homeContact.addEventListener('click', () => {
+  const scrollTo = document.querySelector('#contact');
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+})
 
 
 
