@@ -44,3 +44,16 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+// 스크롤링 할 때 home section 백 그라운드 opacity값 변경하기
+
+const homeContents = document.querySelector('.home__container');
+const homeHeight = homeContents.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  // opacity 1은 불투명 , 0은 투명
+  const windowHeight = window.scrollY;
+  const opacity = 1 - windowHeight / homeHeight; // 1 - "(윈도우 높이 / homeSection 높이)"
+  homeContents.style.opacity = opacity;
+})
+
