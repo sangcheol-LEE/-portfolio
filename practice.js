@@ -16,12 +16,13 @@ const windowY = window.scrollY // 화면 스크롤 값
 
 })
 
-aboutBtn.addEventListener('click', goToTop)
 
+aboutBtn.addEventListener('click', goToTop)
 function goToTop() {
   let topY = document.querySelector('#about').offsetTop - navBarHeight;
   window.scrollTo({top:topY, behavior:"smooth"})
 }
+
 
 // contact me 
 
@@ -41,3 +42,34 @@ document.addEventListener('scroll', () => {
   const bgOpacity = window.scrollY / homeHeight
   home.style.opacity = 1 - bgOpacity;
 })
+
+// 스크롤 시 윈도우 높이가 0보다 커지면 에로우 버튼이 나타나서 가장 위로 올라가는 기능
+
+const arrowBtn = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if(scrollY > 0) {
+    arrowBtn.style.display = "block"
+  }else {
+    arrowBtn.style.display = "none"
+  }
+
+})
+
+arrowBtn.addEventListener('click', () => {
+  const scrollY = window.scrollY;
+  window.scrollTo({top:0, behavior:"smooth"})
+})
+
+// 스크롤링이 되면 버튼이 나오고 버튼 클릭시 제일 상위로 올라가는 버튼 기능
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',() => {
+  if(window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+})
+
+
+
