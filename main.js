@@ -29,19 +29,18 @@ navBarMenu.addEventListener('click', (ev) => {
     return;
   }
 
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: 'smooth'});
+  scrollIntoView(link)
+  
 })
 
 // contact btn 클릭 시 contact 창
 
 const homeContact = document.querySelector('.home__contact');
-
 homeContact.addEventListener('click', () => {
-  const scrollTo = document.querySelector('#contact');
-  scrollTo.scrollIntoView({behavior: 'smooth'});
+  scrollIntoView('#contact')
 })
 
-
-
-
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+}
