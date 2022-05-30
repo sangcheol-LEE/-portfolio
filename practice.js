@@ -71,5 +71,31 @@ document.addEventListener('scroll',() => {
   }
 })
 
+// 워크 필터링 기능
+const workBtnBox = document.querySelector('.work__categories');
+const projectBox = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnBox.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.fliter;
+
+  console.log('filter',filter)
+
+  if(filter === null) {
+    return;
+  }
+
+  projects.forEach(project => {
+    if(filter === '*' || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    }else {
+      project.classList.add('invisible');
+    }
+  });
+
+})
+
+
+
 
 
