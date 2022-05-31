@@ -68,6 +68,29 @@ arrowUp.addEventListener('click', () => {
 });
 
 
+// 필터링 기능 및 애니메이션
+const workBtn = document.querySelector('.work__categories');
+const projectBox = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtn.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter
+  console.log(filter)
+  if(filter == null) {
+    return ;
+  }
+  projectBox.classList.add('ani-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if(filter === "*" || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      }else {
+        project.classList.add('invisible');
+      };
+    });
+    projectBox.classList.remove('ani-out');
+  },300)
+})
 
 
 
