@@ -328,7 +328,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-green);
   color: var(--color-white);
 }
 

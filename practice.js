@@ -83,6 +83,12 @@ workBtns.addEventListener('click', (e) => {
     return;
   }
   
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+
+  const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  e.target.classList.add('selected');
+  
   projectContainer.classList.add('ani-out');
   
   setTimeout(() => {
