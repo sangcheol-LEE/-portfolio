@@ -28,9 +28,15 @@ navBarMenu.addEventListener('click', (ev) => {
   if(link == null) {
     return;
   }
-
+  navBarMenu.classList.remove('open')
   scrollIntoView(link)
   
+})
+
+// navbar Toggle 
+const navToggleBtn = document.querySelector('.navbar__toggle-btn');
+navToggleBtn.addEventListener('click', () => {
+  navBarMenu.classList.toggle('open');
 })
 
 // contact btn 클릭 시 contact 창  
@@ -66,6 +72,8 @@ document.addEventListener('scroll',() => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
+
 
 
 // 필터링 기능 및 애니메이션
