@@ -94,6 +94,9 @@ p {
   color: var(--color-black);
   margin: 4px 0;
 }
+section {
+  padding-top: 60px;
+}
 
 /* Navbar */
 #navbar {
@@ -117,6 +120,12 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: white;
+  display: flex;
+  align-items: center;
+}
+.navbar__image {
+  width: 70px;
+  height: 70px;
 }
 
 .navbar__menu {
@@ -252,6 +261,9 @@ p {
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+.job__logo.t-win {
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 
@@ -560,7 +572,6 @@ p {
   }
   .section {
     padding : 16px;
-    padding-top: 40px;
   }
   .about__majors {
     flex-direction: column;

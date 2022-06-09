@@ -6,7 +6,7 @@
     <title>Ian's Portfolio</title>
     <meta
       name="description"
-      content="Portfolio for world-renowned software engineer Ellie"
+      content="Portfolio for Front-end Developer Ian"
     />
     <meta name="author" content="Ian" />
     <link rel="icon" type="image/png" href="./Images/IanPavicon.png" />
@@ -24,7 +24,7 @@
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
-        <i class="fab fa-diaspora"></i>
+        <img src="./Images/IanPavicon.png" class="navbar__image"/>
         <a href="#">Ian</a>
       </div>
       <ul class="navbar__menu">
@@ -60,7 +60,7 @@
     <section id="about" class="section section__container">
       <h1>About me</h1>
       <p>
-        자기소개 하겠습니다.
+        느리더라도 꾸준히 공부하고 서툴더라도 적용하려는 개발자. <br />이상철
       </p>
       <div class="about__majors">
         <div class="major">
@@ -69,8 +69,9 @@
           </div>
           <h2 class="major__title">HTML / CSS</h2>
           <div class="major__description">
-            HTML, CSS, 
-            <br />Publishing
+            스스로 레이아웃 구조를 짤 수 있고 <br />시맨틱 태그와 웹 표준을 지키며
+            <br /> 접근성에 대해 경험이 많습니다.
+            <br /> SCSS와 LESS 등 CSS전처리기를 활용할 수 있습니다.
           </div>
         </div>
         <div class="major">
@@ -79,8 +80,8 @@
           </div>
           <h2 class="major__title">Java Script</h2>
           <p class="major__description">
-              es6
-            <br /> java script
+              ES5 / ES6 이후 문법에 익숙하고 사용을 준수합니다.
+            <br /> 함수화와 EventListener를 이용한 DOM 조작에 익숙합니다.
           </p>
         </div>
         <div class="major">
@@ -89,8 +90,11 @@
           </div>
           <h2 class="major__title">React</h2>
           <p class="major__description">
-              React about
-            <br />
+              CRA를 통해 초기 세팅에 익숙합니다
+            
+            <br /> 컴포넌트 라이프사이클에 익숙하며 <br />관련 메서드를 사용할 수 있습니다.
+            <br /> class형 보단 hooks로 컴포넌트를 함수화에 익숙합니다.
+
           </p>
         </div>
       </div>
@@ -98,9 +102,9 @@
 
         <div class="job">
           <img
-            src="./Images/favicon.png"
-            alt="samsung"
-            class="job__logo"
+            src="./Images/twin logo.png"
+            alt="t-win"
+            class="job__logo t-win"
           />
           <div class="job__description">
             <p class="job__name">
@@ -132,10 +136,7 @@
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
-          Experience with all phases of the software life-cycle. Passion for
-          learning new technologies. Capable of working within a team environment
-          and independently. Ability to plan and time schedule, work under strict
-          time pressure and adapt quickly when needed.
+           Git을 통한 형상관리에 익숙하며 beyondCompare Tool을 사용하여 편리한 코드관리에 익숙합니다
         </p>
         <div class="skillset">
           <div class="skillset__left">
@@ -203,94 +204,48 @@
       <h3>Projects</h3>
       <div class="work__categories">
         <button class="category__btn selected" data-filter="*">
-          All <span class="category__count">8</span>
+          All <span class="category__count">2</span>
         </button>
         <button class="category__btn" data-filter="front-end">
-          Front-end <span class="category__count">3</span>
+          Front-end <span class="category__count">2</span>
         </button>
         <button class="category__btn" data-filter="back-end">
-          Back-end <span class="category__count">3</span>
+          Back-end <span class="category__count">0</span>
         </button>
         <button class="category__btn" data-filter="mobile">
-          Mobile <span class="category__count">2</span>
+          Mobile <span class="category__count">0</span>
         </button>
       </div>
       
       <div class="work__projects">
-        <a href="" class="project" target="blank" data-type="front-end">
+        <a href="https://github.com/sangcheol-LEE/25-2nd-ifLearn-frontend" class="project" target="blank" data-type="front-end">
           <img
-            src="imgs/projects/youtube.png"
-            alt="Youtube"
+            src="./Images/iflearn.png"
+            alt="iflearn"
             class="project__img"
           />
           <div class="project__description">
-            <h3>Youtube Site</h3>
-            <span>Clone coding with HTML, CSS</span>
+            <h3>inflearn clone coding</h3>
+            <span>HTML,CSS with React</span>
           </div>
         </a>
         <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
+          href="https://github.com/sangcheol-LEE/25-1st-WEKEA-frontend"
           class="project"
           data-type="front-end"
           target="blank"
         >
           <img
             class="project__img"
-            src="imgs/projects/navbar.png"
+            src="./Images/wekea.png"
             alt="navbar"
           />
           <div class="project__description">
-            <h3>Responsive Navbar</h3>
-            <span>HTML, CSS with media query</span>
+            <h3>IKEA Clone Coding</h3>
+            <span>HTML,CSS with React</span>
           </div>
         </a>
-        <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
-          class="project"
-          data-type="front-end"
-          target="blank"
-        >
-          <img class="project__img" src="imgs/projects/game.png" alt="navbar" />
-          <div class="project__description">
-            <h3>Shopping mall game</h3>
-            <span>HTML, CSS, JavaScript, Json</span>
-          </div>
-        </a>
-        <a href="" class="project" data-type="back-end">
-          <img class="project__img" src="imgs/projects/game.png" alt="" />
-          <div class="project__description">
-            <h3>Project</h3>
-            <span>Explanation</span>
-          </div>
-        </a>
-        <a href="" class="project" data-type="back-end">
-          <img class="project__img" src="imgs/projects/game.png" alt="" />
-          <div class="project__description">
-            <h3>Project</h3>
-            <span>Explanation</span>
-          </div>
-        </a>
-        <a href="" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/projects/game.png" alt="" />
-          <div class="project__description">
-            <h3>Project</h3>
-            <span>Explanation</span>
-          </div>
-        </a>
-        <a href="" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/projects/game.png" alt="" />
-          <div class="project__description">
-            <h3>Project</h3>
-            <span>Explanation</span>
-          </div>
-        </a>
-        <a href="" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/projects/game.png" alt="" />
-          <div class="project__description">
-            <h3>Project</h3>
-            <span>Explanation</span>
-          </div>
-        </a>
+        
       </div>
      </div>
     </section>
@@ -303,35 +258,16 @@
     <div class="testimonials">
       <div class="testimonial">
         <img
-          src="imgs/testimonial/people1.jpg"
+          src="./Images/people1.jpg"
           alt="People"
           class="testimonial__avatar"
         />
         <div class="testimonial__speech-bubble">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            fuga libero nulla eveniet aperiam laborum, quis provident
-            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-            explicabo tempora, dignissimos accusantium inventore ducimus!
+            추천사는 준비되는대로 작성하여 넣겠습니다 !
           </p>
-          <p class="name"><a href="">Ellie</a> / Samsung</p>
+          <p class="name"><a href="">Someone</a> / Twin</p>
         </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__speech-bubble">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            fuga libero nulla eveniet aperiam laborum, quis provident
-            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-            explicabo tempora, dignissimos accusantium inventore ducimus!
-          </p>
-          <p class="name"><a href="">Ellie</a> / Samsung</p>
-        </div>
-        <img
-        src="imgs/testimonial/people1.jpg"
-        alt="People"
-        class="testimonial__avatar"
-      />
       </div>
     </div>
    </div>
