@@ -545,8 +545,8 @@ section {
 
   .navbar__toggle-btn {
     display: block;
-    top:16px;
-    right:16px;
+    top:40px;
+    right:35px;
     font-size: var(--font-medium);
   }
 
